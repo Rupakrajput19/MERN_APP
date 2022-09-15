@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+.header {
+  /* color: white; */
+  background-color: #330000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Header css start here */
+
+#header_toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#style_img {
+  height: 75px;
+  width: 75px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.right_header button {
+  padding: 0;
+}
+.page_link {
+  color: white;
+  padding: 10px 20px;
+  margin: 0 20px;
+  font-weight: bolder;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.page_link:hover {
+  color: black;
+  background-color: #fff;
+  border: 2px solid black;
+  transition: 0.6s;
+  /* text-decoration: underline; */
+}
+
+/* Header css end here */
+
+/* Home css start here */
+.home_style {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1100px;
+  height: auto;
+  margin: 100px auto;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 10px black /* , -2px -2px 5px black */;
+}
+
+.registration_img {
+  width: 500px;
+  height: 650px;
+}
+#text_home_regis {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+#text_home {
+  /* text-decoration: underline; */
+  text-align: center;
+}
+
+.registration_form {
+  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.input_field{
+width: 100%;
+}
+
+#submit_btn {
+  padding: 10px 5px;
+  /* width: 100%; */
+  margin-top: 20px;
+  color: white;
+}
+#submit_link {
+  text-align: center;
+  text-decoration: none;
+}
+
+#grid_links {
+  margin: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+#grid_links_btn {
+  color: black;
+  border: 2px solid black;
+}
+#grid_links_btn:hover {
+  transition: 0.5s;
+  color: #fff;
+  border: 2px solid white;
+}
+
+.login_link {
+  /* width: 100px; */
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.login_link p {
+  margin: 0 5px;
+}
+#login_btn {
+  text-decoration: none;
+  color: rgb(25, 118, 210);
+}
+#login_btn:hover{
+  text-decoration: underline;
+
+}
+
+.clear_errors, .clear_error {
+  color: red;
+  font-size: medium;
+  padding: 0 !important; 
+  margin: 0 !important;
+}
+.clear_error{
+  margin: -8px 0 8px 0 !important;
+}
+/* Home css end here */
+
+/* EmployeeDataGrid css start here */
+
+/* EmployeeDataGrid css end here */
+
+/* StudentDataGrid css start here */
+
+/* StudentDataGrid css end here */
+
+/* Form css start here */
+.style_regis_btn,
+.style_regis_btn:hover {
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.style_form_btn {
+  border: 1px solid blue;
+}
+/* Form css end here */
+
+/* All media Query css start here for all components*/
+
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .home_style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 750px;
+    height: auto;
+    margin: 80px 20px;
+  }
+  .registration_img {
+    width: auto;
+    height: 500px;
+  }
+  .registration_form {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #header_toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .page_link {
+    font-size: small;
+    margin: 10px;
+    padding: 5px 8px;
+  }
+  #style_img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+  }
+
+  #spraxa {
+    font-size: 28px;
+  }
+
+  .home_style {
+    width: 370px;
+    /* margin: auto; */
+    margin: 50px auto;
+    justify-content: center;
+  }
+  .registration_img {
+    width: auto;
+    height: 400px;
+  }
+
+  .registration_form {
+    padding: 20px;
+  }
+}
+
+/* @media all and (min-width: 800px) {
+  .main_head {
+    font-size: 40px;
+    color: red;
+  }
+  .GridItems {
+    height: auto;
+    width: 100px;
+    margin: 0;
+  }
+  .Papercells {
+    padding: 2px;
+    height: 50px;
+  }
+} */
+
+/* All media Query css end here for all components*/
