@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+import React  from "react";
+import { useState } from "react";
 import Registration_Image from "../../Images/registration_page.PNG";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -36,8 +37,7 @@ function Home() {
       // return errors;
     }
 
-    let passwordpattern =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@#.$!^%*?&]{8,20}$/;
+    let passwordpattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@#.$!^%*?&]{8,20}$/;
     let passwordstr = formValues.password;
     let validPassword = passwordpattern.test(passwordstr);
 
@@ -46,7 +46,7 @@ function Home() {
       // return errors;
     } else if (!validPassword) {
       errors.password =
-        "Password must be in 8 - 20 character and containt atleast 1 Number, 1 Special Symbol, 1 Uppercase & 1 Lowercase character!";
+      "Password must be in 8 - 20 character and containt atleast 1 Number, 1 Uppercase , 1 Lowercase & 1 Special character!";
       // return errors;
     }
 
@@ -62,21 +62,22 @@ function Home() {
 
       Axios.post(APIs.loginApi, { email, password })
         .then((result) => {
-          console.log("response from backend -> ", result);
+          console.log("Response from backend -> ", result);
           if (result.data && result.data.success) {
             Navigator("/Home", { replace: true });
-          }
-          else {
+          } else {
             setDetails(intitialstate);
             return swal({
-              title: "Login Failed",
-              text: "Invalid login credentials...",
+              title: "Login Failed!",
+              text: `"Invalid login credentials..." \n 'If you are new user please first registered your self.'`,
+              icon: "error",
               button: "Try Again",
             });
           }
         })
         .catch((error) => {
-          alert("Something went wrong", error);
+          setDetails(intitialstate);
+          alert(`Something went wrong ${error}`);
         });
     }
   };
@@ -127,7 +128,7 @@ function Home() {
             label="Password"
             variant="outlined"
             className="input_field"
-            value = {details.password}
+            value={details.password}
             required
             onChange={handleChange}
           />
@@ -155,7 +156,7 @@ function Home() {
           </Typography>
         </Box>
       </div>
-    </>
+      </>
   );
 }
 

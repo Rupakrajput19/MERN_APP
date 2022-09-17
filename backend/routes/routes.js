@@ -1,17 +1,17 @@
 import express from "express";
 // import path from 'path';
 // import router  from "express";
-import { addEmployee, getEmployee, updateEmployee, deleteEmployee, loginAPI } from "../controllers/cotroller.js";
+import { addUser, getUser, updateUser, deleteUser, loginAPI } from "../controllers/cotroller.js";
 
 const router = express.Router();
 
-router.get("/getEmployee", getEmployee);
+router.get("/getUser", getUser);
 
-router.post("/addEmployee", addEmployee);
+router.post("/addUser", addUser);
 
-router.delete("/deleteEmployee", deleteEmployee);
+router.delete("/deleteUser", deleteUser);
 
-router.put("/updateEmployee", updateEmployee);
+router.put("/updateUser", updateUser);
 
 router.post("/login", loginAPI); 
 

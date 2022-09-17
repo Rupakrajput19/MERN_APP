@@ -85,7 +85,7 @@ function Registration() {
       // return errors;
     }
     else if (!validPassword) {
-        errors.password = "Password must be in 8 - 20 character and containt atleast 1 Number, 1 Special Symbol, 1 Uppercase & 1 Lowercase character!";
+        errors.password = "Password must be in 8 - 20 character and containt atleast 1 Number, 1 Uppercase , 1 Lowercase & 1 Special character!";
         // return errors;
     }
   
@@ -109,7 +109,8 @@ function Registration() {
       e.preventDefault();
       console.log("details:--", details);
   
-      Axios.post(APIs.addEmployee, { name, email, mobile, password}).then((response) => {
+      Axios.post(APIs.addUser, { name, email, mobile, password}).then((response) => {
+        console.log(response); 
         console.log("Registration successfull"); 
       })
       .catch((e) => { 

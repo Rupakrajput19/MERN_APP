@@ -1,7 +1,8 @@
+import React from "react";
 import "./App.css";
 // import Header from "./Components/Header/Header.jsx";
 import Footer from "./Components/Footer/Footer";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Registration from './Components/Registration/Registration';
 import Login from './Components/Login/Login';
 import Employeegrid from './Components/Employeegrid/Employeegrid';
@@ -26,7 +27,7 @@ function App() {
         <Route path="*" element={<Notfound />} />
       </Routes>
       <Footer />
-    </>
+      </>
   );
 }
 
